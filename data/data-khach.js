@@ -10,4 +10,8 @@ export const GUESTS = [
   { id: 9, slug: "anh-dong", name: "Anh Đông" },
   { id: 10, slug: "nguyen-huy", name: "Nguyên Huy" },
   { id: 11, slug: "quang-thong", name: "Quang Thông" },
+  { id: 12, slug: "ban-cuong", name: "Bạn ĐQ Cường" },
+  { id: 13, slug: "em-ngan", name: "Em NT Ngân" },
+  { id: 14, slug: "anh-thang", name: "Anh Thắng Tha Thu" },
+  { id: 15, slug: "em-tra", name: "Em Trà" },
 ];
