@@ -45,5 +45,20 @@
     "stk": "00908101502",
     "ten_ngan_hang": "TpBank",
     "link_qr": "https://img.vietqr.io/image/TPB-00908101502-compact.jpg"
+  },
+  "thong_tin_dn": {
+    "ngay_to_chuc": "07/01/2026",
+    "ngay_to_chuc_eng": "07 January 2026",
+    "ngay_am": "ngày 19 tháng 11 năm Ất Tỵ",
+
+    "thoi_gian": "2026-01-07T19:00:00+07:00",
+    "dia_diem": {
+      "ten": "NHÀ HÀNG TUYÊN SƠN 2",
+      "dia_chi_chi_tiet": "240 đường 30/4, Hoà Cường Bắc, Hải Châu, Đà Nẵng"
+    },
+    "link_google_map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15336.8540024872!2d108.20216694677414!3d16.05440700792957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142190018880171%3A0x44357e2b771dfcc4!2zTmjDoCBow6BuZyBUdXnDqm4gU8ahbiAy!5e0!3m2!1svi!2s!4v1767344475210!5m2!1svi!2s",
+    "stk": "00908101502",
+    "ten_ngan_hang": "TpBank",
+    "link_qr": "https://img.vietqr.io/image/TPB-00908101502-compact.jpg"
   }
 }

@@ -8,7 +8,7 @@ import BackgroundMusic from "@/components/ui/music";
 import data from "../../data.json";
 export const HomePage = () => {
   const tt = data;
-  const weddingISO = tt.thong_tin_nha_gai.thoi_gian;
+  const weddingISO = tt.thong_tin_dn.thoi_gian;
   const prefersReduced = useReducedMotion();
   const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
   const ACCENT = "#7b2323";
@@ -40,7 +40,6 @@ export const HomePage = () => {
     return () => window.removeEventListener("keydown", onKey);
   }, [lbOpen, albumImages.length]);
 
-  // Calendar data (gộp tại chỗ)
   const d = useMemo(() => new Date(weddingISO), [weddingISO]);
   const year = d.getFullYear();
   const month = d.getMonth();
@@ -83,7 +82,7 @@ export const HomePage = () => {
             className="mb-3 text-white text-[clamp(18px,3.6vw,22px)] tracking-[0.02em]"
             style={{ fontFamily: "Playfair Display, serif" }}
           >
-            Save the date | {tt.thong_tin_nha_gai.ngay_to_chuc_eng}
+            Save the date | {tt.thong_tin_dn.ngay_to_chuc_eng}
           </motion.h1>
 
           <motion.div
@@ -515,7 +514,7 @@ export const HomePage = () => {
                 color: "#b14d4d",
               }}
             >
-              {tt.thong_tin_nha_gai.dia_diem.ten}
+              {tt.thong_tin_dn.dia_diem.ten}
             </p>
             <p
               className="text-[13px] sm:text-[14px] mb-4"
@@ -524,7 +523,7 @@ export const HomePage = () => {
                 color: "#5a1a1a",
               }}
             >
-              {tt.thong_tin_nha_gai.dia_diem.dia_chi_chi_tiet}
+              {tt.thong_tin_dn.dia_diem.dia_chi_chi_tiet}
             </p>
 
             {/* Đường ngăn trang trí */}
@@ -533,7 +532,7 @@ export const HomePage = () => {
             {/* Khung bản đồ bo góc mềm */}
             <div className="overflow-hidden m-4 rounded-xl border border-gray-200 shadow-inner">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d511.17206285411606!2d105.57406912901477!3d20.90181956788037!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31344551c5a3f733%3A0x17061051fa7f106c!2sPallet%20Cafe!5e1!3m2!1svi!2sus!4v1760955150493!5m2!1svi!2sus"
+                src={tt.thong_tin_dn.link_google_map}
                 width="600"
                 height="450"
                 style={{
