@@ -5,8 +5,14 @@ import { motion, MotionConfig, useReducedMotion } from "framer-motion";
 import CountdownSection from "./sections/CountdownSection";
 import React, { useMemo } from "react";
 import BackgroundMusic from "@/components/ui/music";
-import data from "../../data.json";
+import data from "../../data/data.json";
+import { useSearchParams } from "next/navigation";
+import { GUESTS } from "@/data/data-khach";
+
 export const HomePage = () => {
+  const searchParams = useSearchParams();
+  const guest = searchParams.get("name") || "Bạn và Gia Đình";
+  const guestName = GUESTS.find((g) => g.slug === guest);
   const tt = data;
   const weddingISO = tt.thong_tin_dn.thoi_gian;
   const prefersReduced = useReducedMotion();
@@ -14,7 +20,6 @@ export const HomePage = () => {
   const ACCENT = "#7b2323";
   const accentColor = "#b14d4d";
 
-  // ... phía trên giữ nguyên
   const albumImages = [
     "/images/2doc.jpg",
     "/images/5doc.jpg",
@@ -111,6 +116,32 @@ export const HomePage = () => {
             aspectRatio={0.8}
             rounded={12}
           />
+          <div className="mt-3  flex justify-center">
+            <p
+              className="
+      inline-flex items-center gap-2
+      px-6 py-4
+      rounded-full
+      bg-white border border-white/20
+      shadow-[0_8px_20px_rgba(0,0,0,0.18)]
+      backdrop-blur-md
+      text-[clamp(14px,3.8vw,18px)]
+      text-white/95
+    "
+            >
+              <span className="text-white/80 text-sm">Thân mời: </span>
+              <span
+                className="text-xl"
+                style={{
+                  fontFamily: "Great Vibes, cursive",
+                  color: accentColor,
+                  fontSize: 28,
+                }}
+              >
+                {guestName?.name ?? "Bạn "}
+              </span>
+            </p>
+          </div>
         </motion.div>
 
         {/* === Thông tin hai họ === */}
@@ -307,7 +338,7 @@ export const HomePage = () => {
                   key={i}
                   src={src}
                   alt={`photo-${i + 1}`}
-                  className="w-full aspect-[3/4] object-cover rounded-md shadow"
+                  className="w-full aspect-3/4 object-cover rounded-md shadow"
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: false, amount: 0.35 }}

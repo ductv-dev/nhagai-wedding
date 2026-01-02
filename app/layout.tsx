@@ -1,34 +1,47 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+// app/layout.tsx
 import "./globals.css";
+import {
+  Playfair_Display,
+  Great_Vibes,
+  Dancing_Script,
+  Be_Vietnam_Pro,
+} from "next/font/google";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const playfair = Playfair_Display({
+  subsets: ["latin", "vietnamese"],
+  weight: ["400", "600"],
+  variable: "--font-playfair",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const greatVibes = Great_Vibes({
   subsets: ["latin"],
+  weight: "400",
+  variable: "--font-greatvibes",
 });
 
-export const metadata: Metadata = {
-  title: "Wedding Invitation",
-  description: "Viết Đức & Ngọc Anh",
-};
+const dancing = Dancing_Script({
+  subsets: ["latin", "vietnamese"],
+  weight: ["400", "600"],
+  variable: "--font-dancing",
+});
+
+const bevn = Be_Vietnam_Pro({
+  subsets: ["latin", "vietnamese"],
+  weight: ["300", "400", "500"],
+  variable: "--font-bevn",
+});
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+    <html
+      lang="vi"
+      className={`${playfair.variable} ${greatVibes.variable} ${dancing.variable} ${bevn.variable}`}
+    >
+      <body>{children}</body>
     </html>
   );
 }
