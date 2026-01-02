@@ -18,4 +18,10 @@ export const GUESTS = [
   { id: 17, slug: "thanh-xuan", name: "Em Thanh Xuân" },
   { id: 18, slug: "em-thanh-truc", name: "Em Thanh Trúc" },
   { id: 19, slug: "leo-spa", name: "Chị Em Leo Spa" },
+  { id: 20, slug: "linh-va-phong", name: "Linh & Phong" },
+  { id: 21, slug: "em-my-duyen", name: "Em Mỹ Duyên" },
+  { id: 22, slug: "em-chi-linh", name: "Em Chi Linh" },
+  { id: 23, slug: "em-hau", name: "Em Huỳnh Vĩnh Hậu" },
+  { id: 24, slug: "nha-chung", name: "Nhà Chung NVL" },
+  { id: 25, slug: "thao-phuong", name: "Thảo Phương & NY" },
 ];
