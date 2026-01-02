@@ -125,11 +125,11 @@ export const HomePage = () => {
       bg-white border border-white/20
       shadow-[0_8px_20px_rgba(0,0,0,0.18)]
       backdrop-blur-md
-      text-[clamp(14px,3.8vw,18px)]
-      text-white/95
+      
+      
     "
             >
-              <span className="text-white/80 text-sm">Thân mời: </span>
+              <span className=" text-sm">Thân mời: </span>
               <span
                 className="text-xl"
                 style={{
@@ -763,7 +763,7 @@ export const HomePage = () => {
         </footer>
       </div>
 
-      <BackgroundMusic src="/sounds/nhac.mp3" autoPlay={true} />
+      <BackgroundMusic src="/sounds/audio.mp3" autoPlay={true} />
     </MotionConfig>
   );
 };
