@@ -28,4 +28,5 @@ export const GUESTS = [
   { id: 27, slug: "ba-thanh", name: "Bạn Thanh & Thảo" },
   { id: 28, slug: "quynh-nhu", name: "Em Quỳnh Như" },
   { id: 29, slug: "ban-dat", name: "Bạn Đạt" },
+  { id: 30, slug: "chi-yen", name: "Chị Yến" },
 ];
